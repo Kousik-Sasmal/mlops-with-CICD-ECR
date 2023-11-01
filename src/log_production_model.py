@@ -5,7 +5,10 @@ from mlflow.tracking import MlflowClient
 from pprint import pprint
 import joblib
 import os
+from src.mlflow_credentials import MLFLOW_TRACKING_PASSWORD, MLFLOW_TRACKING_USERNAME
 
+os.environ['MLFLOW_TRACKING_USERNAME'] = MLFLOW_TRACKING_USERNAME
+os.environ['MLFLOW_TRACKING_PASSWORD'] = MLFLOW_TRACKING_PASSWORD
 
 
 def log_production_model(config_path):

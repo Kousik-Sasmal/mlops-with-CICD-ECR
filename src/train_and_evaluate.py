@@ -12,6 +12,10 @@ import joblib
 import json
 import mlflow
 from urllib.parse import urlparse
+from src.mlflow_credentials import MLFLOW_TRACKING_PASSWORD, MLFLOW_TRACKING_USERNAME
+
+os.environ['MLFLOW_TRACKING_USERNAME'] = MLFLOW_TRACKING_USERNAME
+os.environ['MLFLOW_TRACKING_PASSWORD'] = MLFLOW_TRACKING_PASSWORD
 
 def eval_metrics(actual, pred):
     rmse = np.sqrt(mean_squared_error(actual, pred))

@@ -6,3 +6,4 @@ venv/
 prediction_service/__pycache__
 .vscode
 tests/__pycache__
+src/mlflow_credentials.py
